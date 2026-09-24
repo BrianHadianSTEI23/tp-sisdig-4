@@ -9,13 +9,13 @@ architecture behavior of tb_ascii_to_bin is
 
     component ascii_to_bin is
         port (
-            a : in  unsigned(7 downto 0);
-            b : out std_logic_vector(4 downto 0)
+            a : in  unsigned(5 downto 0);
+            b : out std_logic_vector(5 downto 0)
         );
     end component;
 
-    signal a : unsigned(7 downto 0) := (others => '0');
-    signal b : std_logic_vector(4 downto 0);
+    signal a : unsigned(5 downto 0) := (others => '0');
+    signal b : std_logic_vector(5 downto 0);
 
 begin
 
@@ -28,7 +28,7 @@ begin
     stim_proc: process
     begin
         for i in 30 to 50 loop
-            a <= to_unsigned(i, 8);
+            a <= to_unsigned(i, 6);
             wait for 10 ns;
         end loop;
 

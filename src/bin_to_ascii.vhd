@@ -7,9 +7,9 @@ use ieee.numeric_std.all;
 
 entity bin_to_ascii is
     port (
-        a       : in  std_logic_vector(4 downto 0);
+        a       : in  std_logic_vector(5 downto 0);
         
-        b       : out unsigned(4 downto 0)  
+        b       : out unsigned(5 downto 0)  
     );
 end entity bin_to_ascii;
 
